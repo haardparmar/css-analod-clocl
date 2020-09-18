@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock</title>
+	<style type="text/css">
+		body{
+			margin: 0px;
+			background-color: #00243c;
+		}
+		.clockFrame{
+			width: 400px;
+			height: 400px;
+			margin: auto;
+			margin-top: 100px;
+			border-radius: 200px;
+			border-width: 10px;
+			border-style: solid;
+			border-color: #0477c3;
+			box-shadow: 0px 0px 20px 10px #0084db;
+
+		}
+		.numbers{
+			width: 380px;
+			margin-top: 10px;
+			margin-left: 10px;
+			position: absolute;
+		}
+		.sec{
+			height: 150px;
+			width: 2px;
+			border-width: 0px;
+			background-color: red;
+			position: absolute;
+			margin-top: 50px;
+			margin-left: 199px;
+		}
+		.min{
+			height: 150px;
+			width: 5px;
+			border-width: 0px;
+			background-color: white;
+			position: absolute;
+			margin-top: 50px;
+			margin-left: 197.5px;
+		}
+		.hour{
+			height: 120px;
+			width: 5px;
+			border-width: 0px;
+			background-color: white;
+			position: absolute;
+			margin-top: 80px;
+			margin-left: 197.5px;
+		}
+		.mid{
+			height: 20px;
+			width: 20px;
+			border-radius: 20px;
+			background-color: #0477c3;
+			border-width: 6px;
+			border-style: solid;
+			border-color: #00243c;
+			position: absolute;
+			margin-left: 185px;
+			margin-top: 185px;
+		}
+		.sec {
+			animation: rotation 60s infinite linear;
+		}
+		.min {
+			animation: rotation 3600s infinite linear;
+		}
+		.hour {
+			animation: rotation 43200s infinite linear;
+		}
+		@keyframes rotation {
+			from {
+		    	transform: rotate(0deg);
+		    	transform-origin: bottom;
+		  	}
+		  	to {
+		    	transform: rotate(359deg);
+		    	transform-origin: bottom;
+		  	}
+		}
+	</style>
+</head>
+<body>
+<nav class="clockFrame">
+	<img src="numbers.png" class="numbers">
+	<nav class="hour"></nav>
+	<nav class="min"></nav>
+	<nav class="sec"></nav>
+	<nav class="mid"></nav>
+</nav>
+</body>
+</html>
